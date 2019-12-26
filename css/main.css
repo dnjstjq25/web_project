@@ -1,0 +1,525 @@
+/* body, html */
+body{
+	margin: 0; /* 여백 제거 */
+	padding: 0; /* 여백 제거 */
+	background-image: url('../images/body_background.jpg'); /* 홈페이지 배경이미지 설정 */
+	background-size: cover; /* 사이즈, 포지션, 반복, 이미지 형태 설정 */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+html{
+	scroll-behavior: smooth; /* 스크롤 이동 서렂ㅇ */
+}
+
+/* a태그 마우스 오버 */
+a:hover{text-decoration: none; animation: a 0.5s ease-in-out; -webkit-animation: a 0.5s ease-in-out; 
+			color: #ff6666;}
+			@-webkit-keyframes a {0%{color: #fff}100%{color: #ff6666}}
+			@keyframes a {0%{color: #fff}100%{color: #ff6666}}
+
+/* 브라우저 크기에 따른 화면 구성 */
+@media (max-width: 1900px)
+{
+	footer .footer_1{
+		display: none;
+	}
+
+	footer .footer_2{
+		margin: 0 auto;
+		float: none;
+	}
+}
+
+@media (max-width: 1700px) {
+	.contents div > article{
+		font-size: 80px;
+	}
+	.remote{
+		display: none;
+	}
+	.header_left, .header_right, .header_center{
+		display: none;
+	}
+	.wrap .tree, .wrap .slide_box{
+		visibility: visible;
+	}
+
+	
+}
+
+
+@media (max-width: 1400px) {
+	.contents div > article{
+		font-size: 70px;
+	}
+}
+
+
+@media (max-width: 1160px) {
+	.contents div > article{
+		font-size: 60px;
+	}
+
+}
+
+@media (max-width: 1045px) {
+	.contents div > article{
+		font-size: 50px;
+	}
+}
+
+@media (max-width: 845px) {
+	.contents div > article{
+		font-size: 40px;
+	}
+}
+
+@media (max-width: 690px) {
+	.contents div > article{
+		font-size: 30px;
+	}
+}
+
+@media (max-width: 533px) {
+	.contents div > article{
+		font-size: 20px;
+	}
+}
+
+@media (max-width: 378px) {
+	.contents div > article{
+		font-size: 15px;
+	}
+}
+
+
+
+/* header */
+.wrap{ /* 전체 감싸는 부분 */
+	width: 95%;
+	padding: 30px;
+	margin: 0 auto;
+}
+
+/* header 로고 부분 */
+.header_left{
+	width: 15%;
+	font-family: impact;
+	font-size: 23px;
+	float: left;
+}
+
+/* header 로고 a태그 관련 */
+.header_left a{
+	text-decoration: none;
+	color: #fff; 
+}
+
+/* header 가운데 메뉴 부분 */
+.header_center{
+	width: 65%;
+	margin: 0 auto;
+	text-align: center;
+	font-family: impact;
+	font-size: 23px;
+	float: left;
+}
+
+/* header 가운데 a태그 관련*/
+.header_center a{
+	text-decoration: none;
+	color: #fff;
+	margin-left: 100px; 
+}
+
+
+/*header 오른쪽 회원가입 및 로그인 부분 */
+.header_right{
+	width: 15%;
+	float: right;
+	font-family: impact;
+	font-size: 23px;
+	margin-right: -28px;
+	text-align: right;
+}
+
+
+/* header 오른쪽 a태그 관련*/
+.header_right a{
+	text-decoration: none;
+	color: #fff;
+	margin-right: 10px;
+	margin-left: 15px;
+}
+
+
+/* 창 크기 줄었을때 나오는 메뉴바 */
+input[type=checkbox]{
+	display: none;
+}
+.slide_box{ /* 버튼 누르면 나오는 메뉴상자 */
+	width: 250px; 
+	height: 100%; 
+	position: fixed; 
+	top:0; 
+	right: -250px; 
+	background: black; 
+	transition: right 0.2s ease-out; -webkit-transition:right 0.2s ease-out;
+	visibility: hidden;
+}
+.menu_list{/* 메뉴 상자 내부의 메뉴 */
+	margin-top: 300px;
+	list-style: none;
+	padding-left: 0px;
+}
+
+.menu_list li{
+	margin-bottom: 10px;
+	text-align: center;
+	font-size: 20px;
+}
+
+.menu_list a{
+	text-decoration: none;
+	color: #fff;
+}
+
+input.menutr1:checked ~ .slide_box{ /* 메뉴상자 애니메이션 */
+	right: 0; 
+	transition: right 0.2s ease-out; -webkit-transition:right 0.2s ease-out;
+}
+input.menutr1:checked ~ .tree{
+	right: 60px;
+	transition: right 0.2s ease-out; -webkit-transition:right 0.2s ease-out;
+}
+.tree{ /* 창 크기가 줄면 나타나는 메뉴버튼 형태 */
+	width: 32px; 
+	height: 30px;
+	position: fixed; 
+	top:24px; 
+	right:60px; 
+	cursor: pointer; 
+	transition: right 0.2s ease-out; -webkit-transition:right 0.2s ease-out; 
+	visibility: hidden;
+	z-index: 10;
+}
+/* 메뉴버튼 디자인 및 애니메이션 */
+.tbox{width: 20px; margin: 0 auto; margin-top: 6px; position: relative; z-index: 1;}
+	.tree .line1{width: 20px; height: 2px; background: #fff;}
+	.tree .line2{width: 20px; height: 2px; background: #fff; margin-top: 5px;}
+	.tree .line3{width: 20px; height: 2px; background: #fff; margin-top: 5px;}
+		.tree:hover .line1{animation: line1 0.5s ease-in-out; -webkit-animation:line1 0.5s ease-in-out; background: #ff6666;}
+			@-webkit-keyframes line1 {0%{background: #fff}100%{background: #ff6666}}
+			@keyframes line1 {0%{background: #fff}100%{background: #ff6666}}
+
+		.tree:hover .line2{animation: line2 0.5s ease-in-out; -webkit-animation:line2 0.5s ease-in-out; background: #ff6666;}
+			@-webkit-keyframes line2 {0%{background: #fff}100%{background: #ff6666}}
+			@keyframes line2 {0%{background: #fff}100%{background: #ff6666}}
+
+		.tree:hover .line3{animation: line3 0.5s ease-in-out; -webkit-animation:line3 0.5s ease-in-out; background: #ff6666;}
+			@-webkit-keyframes line3 {0%{background: #fff}100%{background: #ff6666}}
+			@keyframes line3 {0%{background: #fff}100%{background: #ff6666}}
+
+/* 본문 전체 감싸는 div */
+.contents{
+	width:95%;
+	padding: 30px;
+	margin: 0 auto;
+}
+
+/* 우측 리모콘 */
+.remote{
+	width: 200px;
+	position: fixed;
+	right: 5px;
+	top: 40%;
+	border: 1px solid white;
+	text-align: center;
+}
+
+.remote a{
+	text-decoration: none;
+	color: #fff;
+	font-size: 20px;
+}
+
+/* contents_1~6 (about_us ~ more_info 까지) */
+.about_us{
+	width: 90%;
+	color: #e9ccff;
+	padding: 50px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.store{
+	width: 90%;
+	color: #e9ccff;
+	padding: 50px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.gallery{
+	width: 90%;
+	color: #e9ccff;
+	padding: 50px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.new_release{
+	width: 90%;
+	color: #e9ccff;
+	padding: 50px;
+	margin: 0 auto;
+	margin-top: 30px;
+	text-align: center;
+}
+
+.video{
+	width: 90%;
+	color: #e9ccff;
+	padding: 50px;
+	margin: 0 auto;
+	margin-top: 30px;
+	text-align: center;
+}
+
+.more_info{
+	width: 90%;
+	color: #e9ccff;
+	padding: 50px;
+	margin: 0 auto;
+	margin-top: 30px;
+	text-align: center;
+}
+
+/* 각 파트 상단 글자 */
+.content_sign{
+	font-size: 80px;
+	color: #fff;
+	font-family: impact;
+	padding: 0px 20px 0px 20px;
+	border-left: 10px double white;
+	border-right: 10px double white;
+}
+
+/* about_us */
+.about_us article{
+	display: inline-block;
+	margin: 20px 20px 0px 20px;
+}
+
+.about_us_pic{ /* 사진 div 크기 (about_us ~ more_info까지 동일) */
+	width: 90%;
+	height: auto;
+}
+
+.about_us_pic img{ /* 이미지 크기 (about_us ~ more_info까지 동일) */
+	width: 100%;
+	height: auto;
+}
+
+.about_us_info /* 사진 밑 문구 (about_us ~ more_info까지 동일) */
+{
+	font-family: impact;
+	font-size: 100px;
+	color: #fff;
+}
+
+/* store */
+.store article{
+	display: inline-block;
+}
+
+.store_pic{
+	width: 90%;
+	height: auto;
+	margin-top: 20px;
+}
+
+.store_pic img{
+	width: 100%;
+	height: auto;
+}
+
+.store_info
+{
+	font-family: impact;
+	font-size: 100px;
+	color: #fff;
+}
+
+/* gallery */
+.gallery article{
+	display: inline-block;
+}
+
+.gallery_pic{
+	width: 90%;
+	height: auto;
+	margin-top: 20px;
+}
+
+.gallery_pic img{
+	width: 100%;
+	height: auto;
+}
+
+.gallery_info
+{
+	font-family: impact;
+	font-size: 100px;
+	color: #fff;
+	margin-top: 15px;
+}
+
+/* new_release */
+.new_release article{
+	display: inline-block;
+}
+
+.new_release_pic{
+	width: 90%;
+	height: auto;
+	margin-top: 20px;
+}
+
+.new_release_pic img{
+	width: 100%;
+	height: auto;
+}
+
+.new_release_info
+{
+	font-family: impact;
+	font-size: 100px;
+	color: #fff;
+	margin-top: 15px;
+}
+
+/* video */
+.video article{
+	display: inline-block;
+}
+
+.video_pic{
+	width: 90%;
+	height: auto;
+	margin-top: 20px;
+}
+
+.video_pic video{
+	width: 100%;
+	height: auto;
+}
+
+.video_info
+{
+	font-family: impact;
+	font-size: 100px;
+	color: #fff;
+	margin-top: 15px;
+}
+
+.video_info img{ /* video 버튼 이미지 */
+	width: 10%;
+	height: 10%;
+	vertical-align: middle;
+	padding-bottom: 20px;
+	padding-right: 10px;
+}
+
+.video_info a{
+	text-decoration: none;
+	color: #fff;
+}
+
+/* more_info */
+.more_info article{
+	display: inline-block;
+}
+
+.more_info_pic{
+	width: 90%;
+	height: auto;
+	margin-top: 20px;
+}
+
+.more_info_pic img{
+	width: 100%;
+	height: auto;
+}
+
+.more_info_info
+{
+	font-family: impact;
+	font-size: 100px;
+	color: #fff;
+	margin-top: 15px;
+}
+
+
+
+/* footer */
+footer{
+	width: 100%;
+	background: rgba(255, 0, 0, 0.5);
+	display: block;
+	float: left;
+	border-top: 1px solid white;
+}
+
+/* footer_1 footer 내부 메뉴들*/
+.footer_1{
+	width: 60%;
+	float: left;
+	margin-top: 55px;
+}
+
+.footer_1 a{
+	text-decoration: none;
+	color: #fff;
+	font-size: 40px;
+	font-family: impact;
+	margin-left: 70px;
+}
+
+.footer_1 h1{
+	float: right;
+}
+
+/* footer_2 이미지 버튼들*/
+.footer_2{
+	width: 35%;
+	float: right;
+}
+
+/* footer_2 table */
+.tb1{
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 40px 40px;
+}
+
+.tb1 td{
+	width: 150px;
+	height: auto;
+}
+
+.tb1 img
+{
+	width: 150px;
+	height: auto;
+}
+
+
+/* 웹 호스팅 광고 제거 */
+footer ~ div{
+	display: none;
+}
+
+
