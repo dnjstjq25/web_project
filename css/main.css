@@ -10,7 +10,7 @@ body{
 }
 
 html{
-	scroll-behavior: smooth; /* 스크롤 이동 서렂ㅇ */
+	scroll-behavior: smooth; /* 스크롤 이동 설정 */
 }
 
 /* a태그 마우스 오버 */
@@ -32,7 +32,7 @@ a:hover{text-decoration: none; animation: a 0.5s ease-in-out; -webkit-animation:
 	}
 }
 
-@media (max-width: 1700px) {
+@media (max-width: 1600px) {
 	.contents div > article{
 		font-size: 80px;
 	}
@@ -45,8 +45,6 @@ a:hover{text-decoration: none; animation: a 0.5s ease-in-out; -webkit-animation:
 	.wrap .tree, .wrap .slide_box{
 		visibility: visible;
 	}
-
-	
 }
 
 
@@ -233,7 +231,7 @@ input.menutr1:checked ~ .tree{
 .remote{
 	width: 200px;
 	position: fixed;
-	right: 5px;
+	right: 60px;
 	top: 40%;
 	border: 1px solid white;
 	text-align: center;
@@ -319,7 +317,7 @@ input.menutr1:checked ~ .tree{
 }
 
 .about_us_pic img{ /* 이미지 크기 (about_us ~ more_info까지 동일) */
-	width: 100%;
+	width: 80%;
 	height: auto;
 }
 
@@ -342,7 +340,7 @@ input.menutr1:checked ~ .tree{
 }
 
 .store_pic img{
-	width: 100%;
+	width: 80%;
 	height: auto;
 }
 
@@ -365,7 +363,7 @@ input.menutr1:checked ~ .tree{
 }
 
 .gallery_pic img{
-	width: 100%;
+	width: 80%;
 	height: auto;
 }
 
@@ -389,7 +387,7 @@ input.menutr1:checked ~ .tree{
 }
 
 .new_release_pic img{
-	width: 100%;
+	width: 80%;
 	height: auto;
 }
 
@@ -413,7 +411,7 @@ input.menutr1:checked ~ .tree{
 }
 
 .video_pic video{
-	width: 100%;
+	width: 80%;
 	height: auto;
 }
 
@@ -450,7 +448,7 @@ input.menutr1:checked ~ .tree{
 }
 
 .more_info_pic img{
-	width: 100%;
+	width: 80%;
 	height: auto;
 }
 
