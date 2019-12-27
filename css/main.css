@@ -22,72 +22,83 @@ a:hover{text-decoration: none; animation: a 0.5s ease-in-out; -webkit-animation:
 /* 브라우저 크기에 따른 화면 구성 */
 @media (max-width: 1900px)
 {
-	footer .footer_1{
+	footer .footer_1{/* 화면이 줄어들면 footer메뉴 우측 슬라이드 박스로 옮김 */
 		display: none;
 	}
 
-	footer .footer_2{
+	footer .footer_2{/* footer_2 가운데 정렬 */
 		margin: 0 auto;
 		float: none;
 	}
 }
 
+
 @media (max-width: 1600px) {
-	.contents div > article{
+	.contents div > article{ /* 본문 폰트 크기 조절 */
 		font-size: 80px;
 	}
-	.remote{
+	.remote{ /* 우측 메뉴 전환하면서 리모콘메뉴 삭제 */
 		display: none;
 	}
-	.header_left, .header_right, .header_center{
+	.header_left, .header_right, .header_center{ /* 상단 메뉴 삭제 */
 		display: none;
 	}
-	.wrap .tree, .wrap .slide_box{
+	.wrap .tree, .wrap .slide_box{/* 우측 슬라이드 메뉴 생성 */
 		visibility: visible;
 	}
 }
 
 
 @media (max-width: 1400px) {
-	.contents div > article{
+	.contents div > article{/* 본문 폰트 조절 */
 		font-size: 70px;
+	}
+}
+
+@media (max-width: 1210px)
+{
+	footer .footer_2{ /* footer_2 삭제 */
+		display: none;
+	}
+	.wrap .slide_box > .menu_list > .slide_img > li > img{ /* footer_2 메뉴 우측으로 옮김 */
+		visibility: visible;
 	}
 }
 
 
 @media (max-width: 1160px) {
-	.contents div > article{
+	.contents div > article{ /* 본문 폰트 조절 */
 		font-size: 60px;
 	}
 
 }
 
 @media (max-width: 1045px) {
-	.contents div > article{
+	.contents div > article{ /* 본문 폰트 조절 */
 		font-size: 50px;
 	}
 }
 
 @media (max-width: 845px) {
-	.contents div > article{
+	.contents div > article{ /* 본문 폰트 조절 */
 		font-size: 40px;
 	}
 }
 
 @media (max-width: 690px) {
-	.contents div > article{
+	.contents div > article{ /* 본문 폰트 조절 */
 		font-size: 30px;
 	}
 }
 
 @media (max-width: 533px) {
-	.contents div > article{
+	.contents div > article{ /* 본문 폰트 조절 */
 		font-size: 20px;
 	}
 }
 
 @media (max-width: 378px) {
-	.contents div > article{
+	.contents div > article{ /* 본문 폰트 조절 */
 		font-size: 15px;
 	}
 }
@@ -167,8 +178,17 @@ input[type=checkbox]{
 	transition: right 0.2s ease-out; -webkit-transition:right 0.2s ease-out;
 	visibility: hidden;
 }
+
+
+.slide_img img{ /* footer_2 메뉴 우측에 있을 때 css */
+	width: 100px;
+	height: auto;
+	visibility: hidden;
+}
+
+
 .menu_list{/* 메뉴 상자 내부의 메뉴 */
-	margin-top: 300px;
+	margin-top: 200px;
 	list-style: none;
 	padding-left: 0px;
 }
