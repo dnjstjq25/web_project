@@ -3,30 +3,33 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Adidas</title>
+	<!-- 화면 크기에 따른 설정 -->
+	<title>Adidas X Arsenal</title>
+	<!-- CSS와 js파일 불러옴 -->
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<script type="text/javascript" src="js/main.js"></script>
 </head>
 
 <body id="body">
-	<header class="wrap">
+	<header class="wrap"><!-- 헤더 전체를 감싸는 클래스 -->
 
-		<div class="header_left">
+		<div class="header_left"><!-- 좌측 메뉴 -->
 			<a href="index.html">ADIDAS  X ARSENAL</a>
 		</div>
 
-		<div class="header_center">
+		<div class="header_center"><!-- 가운데 메뉴 -->
 			<a href="#contents_1">About us</a>
 			<a href="#contents_2">Store</a>
 			<a href="#contents_3">Gallery</a>
 			<a href="#contents_4">New Releases</a>
 		</div>
 
-		<div class="header_right">
+		<div class="header_right"><!-- 우측 메뉴 -->
 			<a href="#">Register</a>
 			<a href="#">Login</a>
 		</div>
 
+		<!-- 우측 슬라이드 메뉴버튼 -->
 		<input name="menu_tree" id="menu_tr1" type="checkbox" class="menutr1">
 		<label for="menu_tr1" class="tree">
 			<div class="tbox">
@@ -36,6 +39,7 @@
 			</div>
 		</label>
 
+		<!-- 슬라이드 박스 -->
 		<div class="slide_box">
 				<ul class="menu_list">
 					<a href="index.html"><li>Home</li></a>
@@ -49,14 +53,17 @@
 					<a href="#contents_5"><li>Video</li></a>
 					<a href="index.html"><li>Book</li></a>
 					<a href="#footer"><li>Bottom</li></a>
+					<a href="#" class="slide_img"><li><img src="images/body_background_change1.jpg" onclick="bgc(1)"></li></a>
+					<a href="#" class="slide_img"><li><img src="images/body_background_change2.jpg" onclick="bgc(2)"></li></a>
+					<a href="#" class="slide_img"><li><img src="images/body_background_change3.jpg" onclick="bgc(3)"></li></a>
 				</ul>
 		</div>
-	
 	</header>
 
+	<!-- 본문 -->
 	<section class="contents">
 
-		<div class="remote">
+		<div class="remote"> <!-- 리모콘메뉴 -->
 			<a href="#body">Top</a><p>
 			<a href="#contents_1">About us</a><p>
 			<a href="#contents_2">Store</a><p>
@@ -67,17 +74,17 @@
 			<a href="#footer">Bottom</a><p>
 		</div>
 
-		<div class="about_us" id="contents_1">
+		<div class="about_us" id="contents_1"> <!-- 본문 1 ~ 6 동일 -->
 			<article class="content_sign">
 				About us
 			</article>
 		
-			<article class="about_us_pic">
+			<article class="about_us_pic"> <!-- 본문1 사진 -->
 				<a href="#contents_1"><img src="images/about_us.jpg" onmouseover="this.src='images/mouse_over_img.jpg'" onmouseout="this.src='images/about_us.jpg'">
 				</a>
 			</article>
 
-			<article class="about_us_info" id="cf_1">
+			<article class="about_us_info" id="cf_1"> 
 				Something Sporting and Tickling
 			</article>
 			
@@ -104,7 +111,7 @@
 		
 			<article class="gallery_pic">
 				<a href="#contents_3">
-					<img src=".images/gallery.jpg" onmouseover="this.src='images/mouse_over_img3.jpg'" onmouseout="this.src='images/gallery.jpg'">
+					<img src="images/gallery.jpg" onmouseover="this.src='images/mouse_over_img3.jpg'" onmouseout="this.src='images/gallery.jpg'">
 				</a>
 			</article>
 			<article class="gallery_info" id="cf_3">
@@ -157,7 +164,7 @@
 
 	</section>
 		
-	<footer id="footer">
+	<footer id="footer"> <!-- 화면 하단 -->
 		<div class="footer_1">
 			<a href="">NEWS</a>
 			<a href="#contents_5">VIDEO</a>
@@ -165,7 +172,7 @@
 			<a class="footer_info">Click Another Background ▷▷▷</a>
 		</div>
 
-		<div class="footer_2">
+		<div class="footer_2"> <!-- 이미지 누르면 배경색 바뀌도록 설정 -->
 			<table class="tb1">
 				<tr>
 					<td><a href="#"><img src="images/body_background_change1.jpg" onclick="bgc(1)"></a></td>
